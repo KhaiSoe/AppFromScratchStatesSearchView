@@ -15,6 +15,7 @@ import com.pursuit.appfromscratch032319.recyclerview.StatesAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                 .create(GetApi.class)
                 .getStates()
                 .subscribeOn(Schedulers.io())
-                .map(StatesWrapper:: getStateList)
+                .map(StatesWrapper::getStateList)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         statesList -> {
@@ -99,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     public void searchViewListener() {
         stateSearchView.setOnQueryTextListener(this);
     }
+
     @Override
     public boolean onQueryTextSubmit(String query) {
         return false;
@@ -114,7 +116,17 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         }
         statesAdapter.setData(newStateList);
         return false;
+
+//
+//        Observable.fromArray(stateList)
+//                .flatMapIterable(stateList -> stateList)
+//                .filter(state -> state.capital.toLowerCase().startsWith(newText.toLowerCase()))
+//                .toList()
+//                .subscribe(states -> statesAdapter.setData(states));
+//        return false;
+
     }
+
 }
 
 
