@@ -17,7 +17,6 @@ public class StatesViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         nameTextView = itemView.findViewById(R.id.state_name_textview);
         capitalTextView = itemView.findViewById(R.id.state_capital_textview);
-
     }
 
     public void onBind(StatesWrapper.State state) {

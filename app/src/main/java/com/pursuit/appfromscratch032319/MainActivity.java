@@ -15,24 +15,16 @@ import com.pursuit.appfromscratch032319.recyclerview.StatesAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observable;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
     private List<StatesWrapper.State> stateList = new ArrayList<>();
-    //private Retrofit retrofit;
     private RecyclerView recyclerView;
     private StatesAdapter statesAdapter;
     private SearchView stateSearchView;
 
-    //private final CompositeDisposable disposable = new CompositeDisposable();
 
     @SuppressLint("CheckResult")
     @Override
@@ -53,24 +45,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     @SuppressLint("CheckResult")
     public void gettingStateList() {
 
-//        retrofit = RetrofitSingleton.getInstance();
-//        retrofit.create(GetApi.class)
-//                .getStates()
-//                .enqueue(new Callback<StatesWrapper>() {
-//                    @Override
-//                    public void onResponse(Call<StatesWrapper> call, Response<StatesWrapper> response) {
-//                        Log.d("Checking if the call works: ", "onResponse: " + response.body().AK.getName());
-//                        stateList.addAll(response.body().getStateList());
-//                        populateRecyclerView(stateList);
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<StatesWrapper> call, Throwable t) {
-//                        Log.e("KHAING!", "onFailure: " + t.getMessage());
-//                    }
-//                });
-
-
         RetrofitSingleton
                 .getInstance()
                 .create(GetApi.class)
@@ -80,15 +54,12 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         statesList -> {
-                            Log.d("Checking if the call works: ", "onResponse: " + statesList.get(0).getName());
                             this.stateList = statesList;
                             populateRecyclerView(stateList);
                         },
                         throwable -> Log.e("KHAING!: ", "onFailure: " + throwable));
 
-
     }
-
 
 
     public void populateRecyclerView(List<StatesWrapper.State> stateList) {
@@ -117,43 +88,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         statesAdapter.setData(newStateList);
         return false;
 
-//
-//        Observable.fromArray(stateList)
-//                .flatMapIterable(stateList -> stateList)
-//                .filter(state -> state.capital.toLowerCase().startsWith(newText.toLowerCase()))
-//                .toList()
-//                .subscribe(states -> statesAdapter.setData(states));
-//        return false;
-
     }
-
 }
-
-
-//put your onSubscribe in disposable to prevent memory leak.
-//    disposable.add(
-//            .getStates()
-//                .subscribeOn(Schedulers.io())
-//            //.map(statesWrapper ->stateList)
-//            .observeOn(AndroidSchedulers.mainThread())
-//            .subscribe(
-//            states -> {
-////
-//        Log.d("Checking if the call works: ", "onResponse: " + states.AK.getName());
-//
-//    },
-//    throwable -> Log.e("KHAING!: ", "onFailure: " + throwable));
-//
-//
-//            )
-
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//    }
-//
-//    @Override
-//    protected void onStop() {
-//        disposable.clear();
-//        super.onStop();
 
