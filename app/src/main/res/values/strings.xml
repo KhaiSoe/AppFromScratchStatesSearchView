@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">AppFromScratch03.23.19</string>
+    <string name="app_name">States Search!</string>
     <string name="search_here">Search Here</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="splash_text">See all the states and the capitals along with
+        \ntheir latitudes and longitudes ~</string>
 </resources>

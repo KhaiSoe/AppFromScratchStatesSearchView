@@ -1,8 +1,14 @@
-package com.pursuit.appfromscratch032319.model;
+package com.pursuit.appfromscratch032319.data.model;
+
+import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Field[] fields = statesWrapper.getClass().getDeclaredFields();
+ * this method takes all the fields from an objects and gives them to you in an array.
+ */
 public class StatesWrapper {
 
     public final State AL;
@@ -364,11 +370,15 @@ public class StatesWrapper {
 
     public class State{
         private String name;
-        private String capital;
+        private String capital; private String lat;
+        @SerializedName("long")
+        private String Long;
 
-        public State(String name, String capital) {
+        public State(String name, String capital, String lat, String aLong) {
             this.name = name;
             this.capital = capital;
+            this.lat = lat;
+            Long = aLong;
         }
 
         public String getName() {
@@ -377,6 +387,14 @@ public class StatesWrapper {
 
         public String getCapital() {
             return capital;
+        }
+
+        public String getLat() {
+            return lat;
+        }
+
+        public String getLong() {
+            return Long;
         }
     }
 }
