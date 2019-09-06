@@ -88,5 +88,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         statesAdapter.setData(newStateList);
         return false;
     }
+
 }
 
