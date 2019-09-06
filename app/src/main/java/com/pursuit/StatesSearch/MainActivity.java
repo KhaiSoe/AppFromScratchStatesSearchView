@@ -57,10 +57,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                             this.stateList = statesList;
                             populateRecyclerView(stateList);
                         },
-                        throwable -> Log.e("KHAING!: ", "onFailure: " + throwable));
+                        throwable -> Log.e(getString(R.string.retrofit_msg), getString(R.string.failure_msg) + throwable));
 
     }
-
 
     public void populateRecyclerView(List<StatesWrapper.State> stateList) {
         statesAdapter = new StatesAdapter(stateList);
@@ -90,4 +89,5 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     }
 
 }
+
 

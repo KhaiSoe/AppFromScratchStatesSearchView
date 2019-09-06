@@ -39,3 +39,4 @@ public class StatesAdapter extends RecyclerView.Adapter<StatesViewHolder> {
 
     }
 }
+

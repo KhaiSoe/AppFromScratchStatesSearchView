@@ -4,4 +4,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="splash_text">See all the states and the capitals along with
         \ntheir latitudes and longitudes ~</string>
+    <string name="retrofit_msg">Retrofit Call</string>
+    <string name="failure_msg">onFailure:</string>
 </resources>
+

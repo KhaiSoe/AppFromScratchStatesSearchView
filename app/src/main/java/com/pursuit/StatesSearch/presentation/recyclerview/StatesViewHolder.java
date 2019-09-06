@@ -31,3 +31,4 @@ public class StatesViewHolder extends RecyclerView.ViewHolder {
         longTextView.setText(state.getLong());
     }
 }
+

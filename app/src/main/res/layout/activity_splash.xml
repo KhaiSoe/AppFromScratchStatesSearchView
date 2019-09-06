@@ -10,34 +10,31 @@
     <io.supercharge.shimmerlayout.ShimmerLayout
         android:id="@+id/shimmer_title"
         android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
         <TextView
             android:id="@+id/splash_title"
-            style="@style/SplashTitle"
-            />
+            style="@style/SplashTitle" />
     </io.supercharge.shimmerlayout.ShimmerLayout>
 
 
     <ImageView
         android:id="@+id/splash_image"
-        android:layout_gravity="center"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/us_map"
-        />
+        android:layout_gravity="center"
+        android:src="@drawable/us_map" />
 
     <io.supercharge.shimmerlayout.ShimmerLayout
         android:id="@+id/shimmer_text"
         android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
         <TextView
             android:id="@+id/splash_text"
-            style="@style/SplashText"
-            />
+            style="@style/SplashText" />
     </io.supercharge.shimmerlayout.ShimmerLayout>
 
 </LinearLayout>

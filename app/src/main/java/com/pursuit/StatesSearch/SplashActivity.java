@@ -9,19 +9,16 @@ import io.supercharge.shimmerlayout.ShimmerLayout;
 
 public class SplashActivity extends AppCompatActivity {
     private static final int SPLASH_LENGTH = 3500;
-    private ShimmerLayout shimmerTitle;
-    private ShimmerLayout shimmerText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        shimmerTitle = findViewById(R.id.shimmer_title);
+        ShimmerLayout shimmerTitle = findViewById(R.id.shimmer_title);
         shimmerTitle.startShimmerAnimation();
-        shimmerText = findViewById(R.id.shimmer_text);
+        ShimmerLayout shimmerText = findViewById(R.id.shimmer_text);
         shimmerText.startShimmerAnimation();
-
 
         new Handler().postDelayed(() -> {
 
@@ -31,3 +28,4 @@ public class SplashActivity extends AppCompatActivity {
         }, SPLASH_LENGTH);
     }
 }
+

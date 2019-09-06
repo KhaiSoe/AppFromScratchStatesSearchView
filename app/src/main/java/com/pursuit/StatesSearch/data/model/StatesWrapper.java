@@ -174,7 +174,8 @@ public class StatesWrapper {
 
     public class State {
         private String name;
-        private String capital; private String lat;
+        private String capital;
+        private String lat;
         @SerializedName("long")
         private String Long;
 
@@ -202,5 +203,6 @@ public class StatesWrapper {
         }
     }
 }
+
 
 

@@ -7,11 +7,10 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitSingleton {
-    public static Retrofit instance;
+    private static Retrofit instance;
+    private static final String BASE_URL = "https://gist.githubusercontent.com/";
 
-    private RetrofitSingleton() {
-
-    }
+    private RetrofitSingleton() { }
 
     @NonNull
     public static Retrofit getInstance() {
@@ -19,10 +18,11 @@ public class RetrofitSingleton {
             return instance;
         }
         instance = new Retrofit.Builder()
-                .baseUrl("https://gist.githubusercontent.com/")
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
         return instance;
     }
 }
+
