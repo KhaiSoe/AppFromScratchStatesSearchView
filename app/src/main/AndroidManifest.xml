@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.pursuit.StatesSearch">
+    package="com.evasiveLime.StatesSearchApp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/ic_blur"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/us_one"
+        android:roundIcon="@drawable/ic_blur"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.pursuit.StatesSearch.SplashActivity"
+        <activity android:name="com.evasiveLime.StatesSearchApp.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.pursuit.StatesSearch.MainActivity"
+        <activity android:name="com.evasiveLime.StatesSearchApp.MainActivity"
             android:screenOrientation="portrait"/>
 
     </application>

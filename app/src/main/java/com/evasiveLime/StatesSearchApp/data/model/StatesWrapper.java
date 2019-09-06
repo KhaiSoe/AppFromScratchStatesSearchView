@@ -1,4 +1,4 @@
-package com.pursuit.StatesSearch.data.model;
+package com.evasiveLime.StatesSearchApp.data.model;
 
 import com.google.gson.annotations.SerializedName;
 

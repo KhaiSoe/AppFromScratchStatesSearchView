@@ -1,4 +1,4 @@
-package com.pursuit.StatesSearch;
+package com.evasiveLime.StatesSearchApp;
 
 import android.content.Intent;
 import android.os.Handler;

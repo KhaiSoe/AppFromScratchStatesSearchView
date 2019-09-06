@@ -1,4 +1,4 @@
-package com.pursuit.StatesSearch.network;
+package com.evasiveLime.StatesSearchApp.network;
 
 import android.support.annotation.NonNull;
 

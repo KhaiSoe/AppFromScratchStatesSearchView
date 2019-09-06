@@ -1,6 +1,6 @@
-package com.pursuit.StatesSearch.network;
+package com.evasiveLime.StatesSearchApp.network;
 
-import com.pursuit.StatesSearch.data.model.StatesWrapper;
+import com.evasiveLime.StatesSearchApp.data.model.StatesWrapper;
 
 import io.reactivex.Single;
 import retrofit2.http.GET;

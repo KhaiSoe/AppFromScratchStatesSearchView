@@ -1,4 +1,4 @@
-package com.pursuit.StatesSearch;
+package com.evasiveLime.StatesSearchApp;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
@@ -8,10 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 
-import com.pursuit.StatesSearch.data.model.StatesWrapper;
-import com.pursuit.StatesSearch.network.GetApi;
-import com.pursuit.StatesSearch.network.RetrofitSingleton;
-import com.pursuit.StatesSearch.presentation.recyclerview.StatesAdapter;
+import com.evasiveLime.StatesSearchApp.data.model.StatesWrapper;
+import com.evasiveLime.StatesSearchApp.network.GetApi;
+import com.evasiveLime.StatesSearchApp.network.RetrofitSingleton;
+import com.evasiveLime.StatesSearchApp.presentation.recyclerview.StatesAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
