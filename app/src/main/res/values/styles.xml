@@ -1,5 +1,4 @@
 <resources>
-
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#36454F</item>
         <item name="colorPrimaryDark">#123175</item>
@@ -51,6 +50,7 @@
         <item name="android:textStyle">italic</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">20sp</item>
+
     </style>
 
 </resources>

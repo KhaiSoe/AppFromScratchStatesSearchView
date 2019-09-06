@@ -22,12 +22,10 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
     private List<StatesWrapper.State> stateList = new ArrayList<>();
-    //private Retrofit retrofit;
     private RecyclerView recyclerView;
     private StatesAdapter statesAdapter;
     private SearchView stateSearchView;
 
-    //private final CompositeDisposable disposable = new CompositeDisposable();
 
     @SuppressLint("CheckResult")
     @Override
@@ -90,9 +88,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         }
         statesAdapter.setData(newStateList);
         return false;
-
-
     }
-
 }
 
