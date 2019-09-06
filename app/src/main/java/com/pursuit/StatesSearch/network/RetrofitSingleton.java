@@ -1,4 +1,4 @@
-package com.pursuit.appfromscratch032319.network;
+package com.pursuit.StatesSearch.network;
 
 import android.support.annotation.NonNull;
 

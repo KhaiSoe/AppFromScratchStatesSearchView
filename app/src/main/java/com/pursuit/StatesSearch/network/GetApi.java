@@ -1,6 +1,6 @@
-package com.pursuit.appfromscratch032319.network;
+package com.pursuit.StatesSearch.network;
 
-import com.pursuit.appfromscratch032319.data.model.StatesWrapper;
+import com.pursuit.StatesSearch.data.model.StatesWrapper;
 
 import io.reactivex.Single;
 import retrofit2.http.GET;

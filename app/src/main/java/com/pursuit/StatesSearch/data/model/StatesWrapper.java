@@ -1,4 +1,4 @@
-package com.pursuit.appfromscratch032319.data.model;
+package com.pursuit.StatesSearch.data.model;
 
 import com.google.gson.annotations.SerializedName;
 

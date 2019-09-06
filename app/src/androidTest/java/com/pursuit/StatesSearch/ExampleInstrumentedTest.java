@@ -1,4 +1,4 @@
-package com.pursuit.appfromscratch032319;
+package com.pursuit.StatesSearch;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

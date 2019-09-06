@@ -1,12 +1,12 @@
-package com.pursuit.appfromscratch032319.presentation.recyclerview;
+package com.pursuit.StatesSearch.presentation.recyclerview;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.pursuit.appfromscratch032319.R;
-import com.pursuit.appfromscratch032319.data.model.StatesWrapper;
+import com.pursuit.StatesSearch.R;
+import com.pursuit.StatesSearch.data.model.StatesWrapper;
 
 import java.util.List;
 

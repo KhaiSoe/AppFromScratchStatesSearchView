@@ -1,4 +1,4 @@
-package com.pursuit.appfromscratch032319;
+package com.pursuit.StatesSearch;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
@@ -8,15 +8,14 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 
-import com.pursuit.appfromscratch032319.data.model.StatesWrapper;
-import com.pursuit.appfromscratch032319.network.GetApi;
-import com.pursuit.appfromscratch032319.network.RetrofitSingleton;
-import com.pursuit.appfromscratch032319.presentation.recyclerview.StatesAdapter;
+import com.pursuit.StatesSearch.data.model.StatesWrapper;
+import com.pursuit.StatesSearch.network.GetApi;
+import com.pursuit.StatesSearch.network.RetrofitSingleton;
+import com.pursuit.StatesSearch.presentation.recyclerview.StatesAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
